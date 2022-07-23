@@ -100,12 +100,12 @@ func AdvanceHours(delta int) {
 //
 // This is a convience function that can be used to make unit tests more readable.
 func AdvanceMinutes(delta int) {
-	fixedClock = fixedClock.Add(time.Duration(delta) * time.Hour)
+	fixedClock = fixedClock.Add(time.Duration(delta) * time.Minute)
 }
 
 // AdvanceSeconds will advance the fixed clock by the specified number of seconds
 //
 // This is a convience function that can be used to make unit tests more readable.
 func AdvanceSeconds(delta int) {
-	fixedClock = fixedClock.Add(time.Duration(delta) * time.Hour)
+	fixedClock = fixedClock.Add(time.Duration(delta) * time.Second)
 }
