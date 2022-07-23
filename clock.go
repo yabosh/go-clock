@@ -88,3 +88,24 @@ func AdvanceFixed(hours int, minutes int, seconds int) {
 func Tick() {
 	AdvanceFixed(0, 0, 1)
 }
+
+// AdvanceHours will advance the fixed clock by the specified number of hours
+//
+// This is a convience function that can be used to make unit tests more readable.
+func AdvanceHours(delta int) {
+	fixedClock = fixedClock.Add(time.Duration(delta) * time.Hour)
+}
+
+// AdvanceMinutes will advance the fixed clock by the specified number of minutes
+//
+// This is a convience function that can be used to make unit tests more readable.
+func AdvanceMinutes(delta int) {
+	fixedClock = fixedClock.Add(time.Duration(delta) * time.Hour)
+}
+
+// AdvanceSeconds will advance the fixed clock by the specified number of seconds
+//
+// This is a convience function that can be used to make unit tests more readable.
+func AdvanceSeconds(delta int) {
+	fixedClock = fixedClock.Add(time.Duration(delta) * time.Hour)
+}
